@@ -98,6 +98,13 @@ public class Examples {
     }
 
     @Test
+    public void testPolygon() {
+        Polygon polygon = new Polygon(new Point[]{new Point(1, 2, 3), new Point(2, 3, 4)});
+        assertEquals(new Point(1, 2, 3), polygon.points[0]);
+        assertEquals(new Point(2, 3, 4), polygon.points[1]);
+    }
+
+    @Test
     public void testQuaternion() {
         Quaternion quaternion = new Quaternion(Math.PI / 2, Vector3.k);
         Quaternion quaternion1 = new Quaternion(0, Vector3.k);
