@@ -27,4 +27,14 @@ public class Pose2D {
     public Pose to3DPose() {
         return new Pose(new Point(x, y, 0), new Quaternion(theta, Vector3.k));
     }
+
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null || !(obj instanceof Pose2D))
+            return false;
+        Pose2D other = (Pose2D) obj;
+        return other.theta == theta && other.x == x && other.y == y;
+    }
+
 }
