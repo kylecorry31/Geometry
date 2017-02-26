@@ -16,4 +16,12 @@ public class Twist {
         this.linear = linear;
         this.angular = angular;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null || !(obj instanceof Twist))
+            return false;
+        Twist other = (Twist) obj;
+        return other.linear.equals(linear) && other.angular.equals(angular);
+    }
 }
