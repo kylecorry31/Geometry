@@ -105,6 +105,15 @@ public class Examples {
     }
 
     @Test
+    public void testPath() {
+        Path path = new Path(new Pose[]{
+                new Pose(new Point(1, 2, 3), Quaternion.zero),
+                new Pose(new Point(2, 3, 4), Quaternion.zero)});
+        assertEquals(new Pose(new Point(1, 2, 3), Quaternion.zero), path.poses[0]);
+        assertEquals(new Pose(new Point(2, 3, 4), Quaternion.zero), path.poses[1]);
+    }
+
+    @Test
     public void testQuaternion() {
         Quaternion quaternion = new Quaternion(Math.PI / 2, Vector3.k);
         Quaternion quaternion1 = new Quaternion(0, Vector3.k);
