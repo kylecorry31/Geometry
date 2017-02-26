@@ -16,4 +16,12 @@ public class Accel {
         this.linear = linear;
         this.angular = angular;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null || !(obj instanceof Accel))
+            return false;
+        Accel other = (Accel) obj;
+        return other.angular.equals(angular) && other.linear.equals(linear);
+    }
 }
