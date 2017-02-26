@@ -81,6 +81,8 @@ public class Examples {
         assertEquals(1, pose2D.x, 0);
         assertEquals(2, pose2D.y, 0);
         assertEquals(Math.PI / 2, pose2D.theta, 0);
+
+        assertEquals(new Pose(new Point(1, 2, 0), new Quaternion(Math.PI / 2, Vector3.k)), pose2D.to3DPose());
     }
 
     @Test
