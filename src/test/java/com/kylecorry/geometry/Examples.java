@@ -91,6 +91,13 @@ public class Examples {
     }
 
     @Test
+    public void testTwist() {
+        Twist twist = new Twist(new Vector3(1, 2, 3), Vector3.zero);
+        assertEquals(new Vector3(1, 2, 3), twist.linear);
+        assertEquals(Vector3.zero, twist.angular);
+    }
+
+    @Test
     public void testQuaternion() {
         Quaternion quaternion = new Quaternion(Math.PI / 2, Vector3.k);
         Quaternion quaternion1 = new Quaternion(0, Vector3.k);
