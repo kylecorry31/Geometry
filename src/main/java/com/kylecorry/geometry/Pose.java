@@ -17,4 +17,12 @@ public class Pose {
         this.position = position;
         this.orientation = orientation;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null || !(obj instanceof Pose))
+            return false;
+        Pose other = (Pose) obj;
+        return other.position.equals(position) && other.orientation.equals(orientation);
+    }
 }
