@@ -84,6 +84,13 @@ public class Examples {
     }
 
     @Test
+    public void testAccel() {
+        Accel accel = new Accel(new Vector3(1, 2, 3), Vector3.zero);
+        assertEquals(new Vector3(1, 2, 3), accel.linear);
+        assertEquals(Vector3.zero, accel.angular);
+    }
+
+    @Test
     public void testQuaternion() {
         Quaternion quaternion = new Quaternion(Math.PI / 2, Vector3.k);
         Quaternion quaternion1 = new Quaternion(0, Vector3.k);
