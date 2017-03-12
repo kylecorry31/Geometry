@@ -1,5 +1,5 @@
 group 'com.kylecorry.geometry'
-version '0.6'
+version '0.6.1'
 
 apply plugin: 'java-library'
 
@@ -11,4 +11,8 @@ repositories {
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.11'
+}
+
+jar {
+    from sourceSets.main.allSource
 }
