@@ -1,5 +1,5 @@
 group 'com.kylecorry.geometry'
-version '0.6.1'
+version '0.7'
 
 apply plugin: 'java-library'
 
