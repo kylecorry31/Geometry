@@ -1,3 +1,7 @@
+plugins {
+    id 'maven-publish'
+}
+
 group 'com.kylecorry.geometry'
 version '0.7'
 
@@ -16,3 +20,31 @@ dependencies {
 jar {
     from sourceSets.main.allSource
 }
+//
+//publishing {
+//    publications {
+//        mavenJava(MavenPublication) {
+//            pom {
+//                description = 'A library of geometric representations'
+//                licenses {
+//                    license {
+//                        name = 'GNU General Public License v3.0'
+//                        url = 'https://www.gnu.org/licenses/gpl-3.0.en.html'
+//                    }
+//                }
+//                developers {
+//                    developer {
+//                        id = 'kylecorry31'
+//                        name = 'Kyle Corry'
+//                        email = 'kylecorry31@gmail.com'
+//                    }
+//                }
+//                scm {
+//                    connection = 'scm:git:git://github.com/kylecorry31/Geometry.git'
+//                    developerConnection = 'scm:git:ssh://github.com/kylecorry31/Geometry.git'
+//                    url = 'https://github.com/kylecorry31/Geometry'
+//                }
+//            }
+//        }
+//    }
+//}
