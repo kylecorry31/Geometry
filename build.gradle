@@ -1,8 +1,6 @@
 group 'com.kylecorry.geometry'
 version '0.7'
 
-apply plugin: 'maven'
-apply plugin: 'signing'
 apply plugin: 'java-library'
 
 sourceCompatibility = 1.8
@@ -15,20 +13,6 @@ dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.11'
 }
 
-task javadocJar(type: Jar) {
-    classifier = 'javadoc'
-    from javadoc
-}
-
-task sourcesJar(type: Jar) {
-    classifier = 'sources'
+jar {
     from sourceSets.main.allSource
-}
-
-artifacts {
-    archives javadocJar, sourcesJar
-}
-
-signing {
-    sign configurations.archives
 }
