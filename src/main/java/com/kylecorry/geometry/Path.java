@@ -17,6 +17,26 @@ public class Path {
         this.poses = poses;
     }
 
+
+    /**
+     * Get the total distance of the path.
+     * @return The distance of the path.
+     */
+    public double getDistance() {
+        double distance = 0;
+
+        for (int i = 0; i < poses.length - 1; i++) {
+            Pose current = poses[i];
+            Pose next = poses[i + 1];
+
+            Vector3 distanceVector = Vector3.fromPoints(current.position, next.position);
+
+            distance += distanceVector.magnitude();
+        }
+        
+        return distance;
+    }
+
     @Override
     public boolean equals(Object obj) {
         if (obj == null || !(obj instanceof Path))
