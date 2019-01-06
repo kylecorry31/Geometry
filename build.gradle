@@ -1,11 +1,9 @@
 plugins {
-    id 'maven-publish'
+    id 'java-library'
 }
 
 group 'com.kylecorry.geometry'
-version '0.7'
-
-apply plugin: 'java-library'
+version '0.8'
 
 sourceCompatibility = 1.8
 
@@ -14,37 +12,9 @@ repositories {
 }
 
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.11'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
 }
 
 jar {
     from sourceSets.main.allSource
 }
-//
-//publishing {
-//    publications {
-//        mavenJava(MavenPublication) {
-//            pom {
-//                description = 'A library of geometric representations'
-//                licenses {
-//                    license {
-//                        name = 'GNU General Public License v3.0'
-//                        url = 'https://www.gnu.org/licenses/gpl-3.0.en.html'
-//                    }
-//                }
-//                developers {
-//                    developer {
-//                        id = 'kylecorry31'
-//                        name = 'Kyle Corry'
-//                        email = 'kylecorry31@gmail.com'
-//                    }
-//                }
-//                scm {
-//                    connection = 'scm:git:git://github.com/kylecorry31/Geometry.git'
-//                    developerConnection = 'scm:git:ssh://github.com/kylecorry31/Geometry.git'
-//                    url = 'https://github.com/kylecorry31/Geometry'
-//                }
-//            }
-//        }
-//    }
-//}
